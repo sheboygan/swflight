@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040EFE092F91B86A00B57EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040EFE082F91B86A00B57EE0 /* Assets.xcassets */; };
 		B001 /* SouthwestRoutesMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001 /* SouthwestRoutesMapApp.swift */; };
 		B002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002 /* ContentView.swift */; };
 		B003 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003 /* Models.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040EFE082F91B86A00B57EE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
 		A001 /* SouthwestRoutesMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouthwestRoutesMapApp.swift; sourceTree = "<group>"; };
 		A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A003 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -30,7 +32,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FW01 = {
+		FW01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,22 +45,23 @@
 		GRP0 = {
 			isa = PBXGroup;
 			children = (
-				GRP1,
-				GRP2,
+				GRP1 /* SouthwestRoutesMap */,
+				GRP2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		GRP1 /* SouthwestRoutesMap */ = {
 			isa = PBXGroup;
 			children = (
-				A001,
-				A002,
-				A003,
-				A004,
-				A005,
-				A006,
-				A007,
-				A008,
+				A001 /* SouthwestRoutesMapApp.swift */,
+				A002 /* ContentView.swift */,
+				A003 /* Models.swift */,
+				A004 /* FlightViewModel.swift */,
+				A005 /* MapOverlays.swift */,
+				A006 /* RouteMapView.swift */,
+				A007 /* StatsPanelView.swift */,
+				A008 /* AirportDetailSheet.swift */,
+				040EFE082F91B86A00B57EE0 /* Assets.xcassets */,
 			);
 			path = SouthwestRoutesMap;
 			sourceTree = "<group>";
@@ -66,7 +69,7 @@
 		GRP2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				PROD,
+				PROD /* SouthwestRoutesMap.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,11 +79,11 @@
 /* Begin PBXNativeTarget section */
 		TGT1 /* SouthwestRoutesMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFGL1;
+			buildConfigurationList = CFGL1 /* Build configuration list for PBXNativeTarget "SouthwestRoutesMap" */;
 			buildPhases = (
-				PH01,
-				FW01,
-				PH02,
+				PH01 /* Sources */,
+				FW01 /* Frameworks */,
+				PH02 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -88,7 +91,7 @@
 			);
 			name = SouthwestRoutesMap;
 			productName = SouthwestRoutesMap;
-			productReference = PROD;
+			productReference = PROD /* SouthwestRoutesMap.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CFGL0;
+			buildConfigurationList = CFGL0 /* Build configuration list for PBXProject "SouthwestRoutesMap" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,42 +118,43 @@
 				Base,
 			);
 			mainGroup = GRP0;
-			productRefGroup = GRP2;
+			productRefGroup = GRP2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				TGT1,
+				TGT1 /* SouthwestRoutesMap */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		PH01 = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B001,
-				B002,
-				B003,
-				B004,
-				B005,
-				B006,
-				B007,
-				B008,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
 /* Begin PBXResourcesBuildPhase section */
-		PH02 = {
+		PH02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040EFE092F91B86A00B57EE0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PH01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B001 /* SouthwestRoutesMapApp.swift in Sources */,
+				B002 /* ContentView.swift in Sources */,
+				B003 /* Models.swift in Sources */,
+				B004 /* FlightViewModel.swift in Sources */,
+				B005 /* MapOverlays.swift in Sources */,
+				B006 /* RouteMapView.swift in Sources */,
+				B007 /* StatsPanelView.swift in Sources */,
+				B008 /* AirportDetailSheet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		BC01 /* Debug */ = {
@@ -249,6 +253,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = B6TAVKA596;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to show your position on the route map.";
@@ -276,6 +281,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = B6TAVKA596;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to show your position on the route map.";
@@ -301,8 +307,8 @@
 		CFGL0 /* Build configuration list for PBXProject "SouthwestRoutesMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC01,
-				BC02,
+				BC01 /* Debug */,
+				BC02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -310,14 +316,13 @@
 		CFGL1 /* Build configuration list for PBXNativeTarget "SouthwestRoutesMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC03,
-				BC04,
+				BC03 /* Debug */,
+				BC04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = PROJ /* Project object */;
 }

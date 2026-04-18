@@ -14,8 +14,8 @@ struct Airport: Identifiable, Hashable {
 }
 
 // MARK: - Flight Route
-struct FlightRoute: Identifiable {
-    let id = UUID()
+struct FlightRoute: Identifiable, Codable, Equatable {
+    let id: UUID
     let from: String
     let to: String
     let date: String
@@ -23,6 +23,27 @@ struct FlightRoute: Identifiable {
     let month: String
     let pilot: String
     let blockTime: Double
+
+    init(from: String, to: String, date: String, flightNumber: String,
+         month: String, pilot: String, blockTime: Double) {
+        self.id = UUID()
+        self.from = from
+        self.to = to
+        self.date = date
+        self.flightNumber = flightNumber
+        self.month = month
+        self.pilot = pilot
+        self.blockTime = blockTime
+    }
+
+    /// Unique key for duplicate detection (date + flight number + from + to)
+    var deduplicationKey: String {
+        "\(date)|\(flightNumber)|\(from)|\(to)"
+    }
+
+    static func == (lhs: FlightRoute, rhs: FlightRoute) -> Bool {
+        lhs.deduplicationKey == rhs.deduplicationKey
+    }
 }
 
 // MARK: - Route Segment (unique from→to pair with frequency)
@@ -83,7 +104,6 @@ let airportDatabase: [String: (lat: Double, lng: Double, name: String)] = [
     "AUS": (30.1975, -97.6664, "Austin"),
     "CRP": (27.7704, -97.5012, "Corpus Christi"),
     "DAL": (32.8481, -96.8512, "Dallas Love Field"),
-    "ELP": (31.8019, -106.3952, "El Paso"),
     "HOU": (29.9902, -95.3368, "Houston Hobby"),
     "HRL": (26.2285, -97.6544, "Harlingen"),
     "LBB": (33.6636, -101.8230, "Lubbock"),

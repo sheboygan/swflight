@@ -63,6 +63,7 @@ class CurvedRouteRenderer: MKOverlayRenderer {
         let dx = toPoint.x - fromPoint.x
         let dy = toPoint.y - fromPoint.y
         let dist = sqrt(dx * dx + dy * dy)
+        guard dist > 0 else { return }
 
         // Curve control point — perpendicular to midpoint
         let curveFactor: CGFloat = min(0.35, 80 / dist)
